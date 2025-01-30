@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+		<link rel="icon" href="./pictures/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>Clock</title>
+		<meta
+			name="description"
+			content="Just a clock."
+		/>
+
+		<meta content="Clock" property="og:title" />
+		<meta
+			content="Just a clock."
+			property="og:description"
+		/>
+		<meta content="#ff0000" name="theme-color" />
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-black justify-center items-center text-center">
+  <script>
+    function rotate(hand, rotation) {
+      return document.querySelector("#" + hand).style.transform = "rotate(" + rotation + "deg)";
+    }
+
+    let hour_rotation = 0;
+    let minute_rotation = 0;
+    let second_rotation = 0;
+
+    setInterval(() => {
+      const date = new Date();
+      const [hours, minutes, seconds, milliseconds] = [date.getHours(), date.getMinutes(), date.getSeconds(), date.getMilliseconds()];
+
+      hour_rotation = hours * 30 + minutes / 60 * 30 + seconds / 60 / 60 * 30;
+      minute_rotation = minutes * 6 + seconds / 60 * 6;
+      second_rotation = seconds * 6 + milliseconds / 1000 * 6;
+
+      rotate("hour-hand", hour_rotation);
+      rotate("minute-hand", minute_rotation);
+      rotate("second-hand", second_rotation);
+    });
+  </script>
+
+  <div id="page" class="h-full min-h-screen w-full absolute">
+    <img id="clock-numbers" class="size-[350px] top-1/2 left-1/2 -translate-1/2 absolute" src="./pictures/clock-numbers.png" />
+    <div id="hour-hand" class="h-[70px] w-[5px] bg-white top-1/2 left-1/2 origin-bottom -translate-x-1/2 -translate-y-full absolute"></div>
+    <div id="minute-hand" class="h-[85px] w-[5px] bg-[#777777] top-1/2 left-1/2 origin-bottom -translate-x-1/2 -translate-y-full absolute"></div>
+    <div id="second-hand" class="h-[100px] w-[5px] bg-[#ff0000] top-1/2 left-1/2 origin-bottom -translate-x-1/2 -translate-y-full absolute"></div>
+    <div id="dot" class="size-[10px] bg-white rounded-full top-1/2 left-1/2 -translate-1/2 absolute"></div>
+  </div>
+</body>
+</html>
