@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-		<link rel="icon" href="./pictures/favicon.ico" />
+		<link rel="icon" href="../pictures/favicon.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<title>Clock</title>
@@ -38,19 +38,19 @@
       minute_rotation = minutes * 6 + seconds / 60 * 6;
       second_rotation = seconds * 6 + milliseconds / 1000 * 6;
 
-      rotate("hour-hand", hour_rotation);
-      rotate("minute-hand", minute_rotation);
-      rotate("second-hand", second_rotation);
+      rotate("clock-numbers", -second_rotation)
+      rotate("hour-hand", hour_rotation - second_rotation);
+      rotate("minute-hand", minute_rotation - second_rotation);
     });
   </script>
 
-  <div id="page" class="h-screen w-full absolute">
+  <div id="page" class="h-screen w-full overflow-hidden absolute">
     <div id="top-bar" class="h-auto w-full bg-zinc-900 py-[7.5px] border-b border-white top-0 absolute">
-      <p id="v2" class="font-bold text-[17px] text-white">Go To <a class="text-blue-400" href="/v2/">2nd Version</a></p>
+      <p id="reference" class="font-bold text-[17px] text-white">Inspired by <a class="text-blue-400" href="https://www.publicartfund.org/exhibitions/view/alicja-kwade-against-the-run/">Alicja Kwade: Against the Run</a></p>
     </div>
     
     <div id="clock" class="content">
-      <img id="clock-numbers" class="size-[350px] top-1/2 left-1/2 -translate-1/2 absolute select-none pointer-events-none" src="./pictures/clock-numbers.png" alt="Clock Numbers" />
+      <img id="clock-numbers" class="size-[350px] top-1/2 left-1/2 -translate-1/2 absolute select-none pointer-events-none" src="../pictures/clock-numbers.png" alt="Clock Numbers" />
       <div id="hour-hand" class="h-[70px] w-[5px] bg-white top-1/2 left-1/2 origin-bottom -translate-x-1/2 -translate-y-full absolute"></div>
       <div id="minute-hand" class="h-[85px] w-[5px] bg-[#777777] top-1/2 left-1/2 origin-bottom -translate-x-1/2 -translate-y-full absolute"></div>
       <div id="second-hand" class="h-[100px] w-[5px] bg-[#ff0000] top-1/2 left-1/2 origin-bottom -translate-x-1/2 -translate-y-full absolute"></div>
