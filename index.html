@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-		<link rel="icon" href="./pictures/favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <link rel="icon" href="./pictures/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<title>Clock</title>
-		<meta
-			name="description"
-			content="Just a clock."
-		/>
+  <title>Clock</title>
+  <meta name="description" content="Just a clock." />
 
-		<meta content="Clock" property="og:title" />
-		<meta
-			content="Just a clock."
-			property="og:description"
-		/>
-		<meta content="#ff0000" name="theme-color" />
+  <meta content="Clock" property="og:title" />
+  <meta content="Just a clock." property="og:description" />
+  <meta content="#ff0000" name="theme-color" />
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
@@ -45,17 +40,33 @@
   </script>
 
   <div id="page" class="h-screen w-full absolute">
-    <div id="top-bar" class="h-auto w-full bg-zinc-900 py-[7.5px] border-b border-white top-0 absolute">
-      <p id="v2" class="font-bold text-[17px] text-white">Go To <a class="text-blue-400" href="/v2/">2nd Version</a></p>
-    </div>
-    
     <div id="clock" class="content">
-      <img id="clock-numbers" class="size-[350px] top-1/2 left-1/2 -translate-1/2 absolute select-none pointer-events-none" src="./pictures/clock-numbers.png" alt="Clock Numbers" />
-      <div id="hour-hand" class="h-[70px] w-[5px] bg-white top-1/2 left-1/2 origin-bottom -translate-x-1/2 -translate-y-full absolute"></div>
-      <div id="minute-hand" class="h-[85px] w-[5px] bg-[#777777] top-1/2 left-1/2 origin-bottom -translate-x-1/2 -translate-y-full absolute"></div>
-      <div id="second-hand" class="h-[100px] w-[5px] bg-[#ff0000] top-1/2 left-1/2 origin-bottom -translate-x-1/2 -translate-y-full absolute"></div>
-      <div id="dot" class="size-[10px] bg-white rounded-full top-1/2 left-1/2 -translate-1/2 absolute"></div>
+      <img id="clock-numbers"
+        class="size-[350px] -translate-1/2 top-1/2 left-1/2 absolute select-none pointer-events-none"
+        src="./pictures/clock-numbers.png" alt="Clock Numbers" />
+      <div id="hour-hand"
+        class="h-[70px] w-[5px] bg-white -translate-x-1/2 -translate-y-full top-1/2 left-1/2 origin-bottom absolute">
+      </div>
+      <div id="minute-hand"
+        class="h-[85px] w-[5px] bg-[#777777] -translate-x-1/2 -translate-y-full top-1/2 left-1/2 origin-bottom absolute">
+      </div>
+      <div id="second-hand"
+        class="h-[100px] w-[5px] bg-[#ff0000] -translate-x-1/2 -translate-y-full top-1/2 left-1/2 origin-bottom absolute">
+      </div>
+      <div id="dot" class="size-[10px] bg-white rounded-full -translate-1/2 top-1/2 left-1/2 absolute"></div>
+    </div>
+
+    <div id="footer" class="h-auto w-full py-[20px] bottom-0 fixed">
+      <p id="legal" class="text-[16px] text-gray-400">
+        <a id="terms" href="https://zecotron.my.id/terms">Terms of Service</a> •
+        <a id="privacy" href="https://zecotron.my.id/privacy">Privacy Policy</a>
+      </p>
+
+      <p id="copyright" class="font-bold text-[17px] text-white">
+        © 2025 Zecotron. All Rights Reserved.
+      </p>
     </div>
   </div>
 </body>
+
 </html>

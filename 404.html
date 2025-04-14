@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-		<link rel="icon" href="../pictures/favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="utf-8" />
+	<link rel="icon" href="../pictures/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<title>Clock</title>
-		<meta
-			name="description"
-			content="Just a clock."
-		/>
+	<title>Clock</title>
+	<meta name="description" content="Just a clock." />
 
-		<meta content="Clock" property="og:title" />
-		<meta
-			content="Just a clock."
-			property="og:description"
-		/>
-		<meta content="#ff0000" name="theme-color" />
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+	<meta content="Clock" property="og:title" />
+	<meta content="Just a clock." property="og:description" />
+	<meta content="#ff0000" name="theme-color" />
+	<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
 <body class="min-h-screen bg-black justify-center items-center text-center">
-  <div id="page" class="h-screen w-full absolute">
-    <p id="error" class="font-bold text-[20px] text-gray-400 mt-[250px]">Error<br><span class="text-gray-200">404</span><br>Not Found</p>
-    <p id="addition" class="text-[19px] text-gray-200 mt-[20px]"> Are you sure you're in the right page? </p>
-  </div>
+	<div id="page" class="h-screen w-full absolute">
+		<p id="error" class="font-bold text-[20px] text-gray-400 mt-[250px]">Error<br><span
+				class="text-gray-200">404</span><br>Not Found</p>
+		<p id="addition" class="text-[19px] text-gray-200 mt-[20px]"> Are you sure you're in the right page? </p>
+
+		<div id="footer" class="h-auto w-full py-[20px] bottom-0 fixed">
+			<p id="legal" class="text-[16px] text-gray-400">
+				<a id="terms" href="https://zecotron.my.id/terms">Terms of Service</a> •
+				<a id="privacy" href="https://zecotron.my.id/privacy">Privacy Policy</a>
+			</p>
+
+			<p id="copyright" class="font-bold text-[17px] text-white">
+				© 2025 Zecotron. All Rights Reserved.
+			</p>
+		</div>
+	</div>
 </body>
+
 </html>
