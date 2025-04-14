@@ -15,16 +15,27 @@
 
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
+  <style>
+		@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+		#clock-number-text {
+			font-family: "Montserrat", sans-serif;
+			font-optical-sizing: auto;
+			font-weight: 600;
+			font-style: normal;
+		}
+	</style>
+
   <style type="text/tailwindcss">
     .absolute-center {
       @apply top-1/2 left-1/2 absolute;
     }
 
     #clock-line {
-      @apply h-[200px] w-[2px] bg-transparent -translate-x-1/2 -translate-y-full origin-bottom top-1/2 left-1/2 absolute;
+      @apply h-[170px] w-[2px] bg-transparent -translate-x-1/2 -translate-y-full origin-bottom top-1/2 left-1/2 absolute;
 
       &::before {
-        @apply content-[""] h-[20px] w-[2px] bg-white -translate-x-1/2 -translate-y-full top-0 left-1/2 absolute;
+        @apply content-[""] h-[15px] w-[2px] bg-white -translate-x-1/2 -translate-y-full top-0 left-1/2 absolute;
       }
 
       &:nth-child(5n+1)::before {
@@ -33,11 +44,11 @@
     }
 
     #clock-number {
-      @apply h-[130px] w-[2px] bg-transparent -translate-x-1/2 -translate-y-full origin-bottom top-1/2 left-1/2 absolute;
+      @apply h-[100px] w-[2px] bg-transparent -translate-x-1/2 -translate-y-full origin-bottom top-1/2 left-1/2 absolute;
     }
 
     #clock-number-text {
-      @apply font-mono text-[45px] text-white -translate-x-1/2 -translate-y-full top-0 left-1/2 absolute;
+      @apply text-[45px] text-white -translate-x-1/2 -translate-y-full top-0 left-1/2 absolute;
     }
   </style>
 </head>
