@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -13,44 +13,7 @@
   <meta content="Just a clock." property="og:description" />
   <meta content="#ff0000" name="theme-color" />
 
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-
-  <style>
-		@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
-		#clock-number-text {
-			font-family: "Montserrat", sans-serif;
-			font-optical-sizing: auto;
-			font-weight: 600;
-			font-style: normal;
-		}
-	</style>
-
-  <style type="text/tailwindcss">
-    .absolute-center {
-      @apply top-1/2 left-1/2 absolute;
-    }
-
-    #clock-line {
-      @apply h-[170px] w-[2px] bg-transparent -translate-x-1/2 -translate-y-full origin-bottom top-1/2 left-1/2 absolute;
-
-      &::before {
-        @apply content-[""] h-[15px] w-[2px] bg-white -translate-x-1/2 -translate-y-full top-0 left-1/2 absolute;
-      }
-
-      &:nth-child(5n+1)::before {
-        @apply w-[6px];
-      }
-    }
-
-    #clock-number {
-      @apply h-[100px] w-[2px] bg-transparent -translate-x-1/2 -translate-y-full origin-bottom top-1/2 left-1/2 absolute;
-    }
-
-    #clock-number-text {
-      @apply text-[45px] text-white -translate-x-1/2 -translate-y-full top-0 left-1/2 absolute select-none pointer-events-none;
-    }
-  </style>
+  <link rel="stylesheet" href="./tailwind.css" />
 </head>
 
 <body class="min-h-screen bg-black justify-center items-center text-center">
@@ -104,7 +67,7 @@
         rotate("minute-hand", minute_rotation);
         rotate("second-hand", second_rotation);
       });
-    }, 1000);
+    }, 100);
   </script>
 
   <div id="page" class="h-screen w-full absolute">
