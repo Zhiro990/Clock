@@ -1,6 +1,11 @@
 /*! tailwindcss v4.1.4 | MIT License | https://tailwindcss.com */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @layer properties;
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 100 900;
+  src: url("./fonts/montserrat.ttf") format("truetype-variations");
+  src: url("./fonts/montserrat.ttf") format("truetype") tech("variations");
+}
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -280,10 +285,8 @@
   }
 }
 #clock-number-text {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
+  font-family: "Montserrat";
   font-weight: 600;
-  font-style: normal;
 }
 .absolute-center {
   position: absolute;
